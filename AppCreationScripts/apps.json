@@ -1,0 +1,46 @@
+{
+  "Sample": {
+    "Title": "Calling Microsoft Graph from a JavaScript SPA App",
+    "Level": 400,
+    "Client": "JavaScript, msal.js, MSAL"
+  },
+  "AppRegistrations": [
+    {
+      "x-ms-id": "JavaScriptSpa",
+      "x-ms-name": "active-directory-javascript-graphapi-v2",
+      "x-ms-version": "2.0",
+      "logoutUrl": "http://localhost:8010/",
+      "replyUrlsWithType": [
+        {
+          "url": "http://localhost:8010/",
+          "type": "Web"
+        }
+      ],
+      "oauth2AllowImplicitFlow": true,
+      "oauth2AllowIdTokenImplicitFlow": true,
+      "requiredResourceAccess": [
+        {
+          "x-ms-resourceAppName": "Microsoft Graph",
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+              "type": "Scope",
+              "x-ms-name": "user.read"
+            }
+          ]
+        }
+      ],
+      "codeConfigurations": [	
+        {
+	  "settingFile": "/JavaScriptSPA/index.html", 
+          "replaceTokens": 
+            {
+	      "appId": "a0b13d14-2f8d-4dcb-9583-4b40b803191a",
+	      "tenantId": "90b92f5f-79c4-4fa9-9eea-7265479e6271"
+	    }
+	}
+       ]
+    }
+  ]
+}
